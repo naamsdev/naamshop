@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Bot de Modération",
+    "description": "Un bot complet pour la modération de serveurs Discord avec logs, anti-spam, et commandes personnalisées.",
+    "price": 15.99,
+    "image": "/modbot.png"
+  },
+  {
+    "id": "2",
+    "name": "Bot Musique",
+    "description": "Permet d'écouter de la musique depuis YouTube, Spotify, etc. sur votre serveur Discord.",
+    "price": 12.99,
+    "image": "/musicbot.png"
+  },
+  {
+    "id": "3",
+    "name": "Bot Giveaway",
+    "description": "Organisez facilement des giveaways automatiques sur votre serveur Discord.",
+    "price": 9.99,
+    "image": "/giveawaybot.png"
+  }
+] 

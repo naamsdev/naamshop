@@ -1,0 +1,12 @@
+{
+    "admin": {
+      "username": "oscar",
+      "password": "oscar2009!"
+    },
+    "email": {
+      "user": "ton_email@gmail.com",
+      "password": "mot_de_passe_application",
+      "defaultSubject": "🤖 Merci pour votre achat !",
+      "defaultMessage": "Bonjour, merci pour votre commande !"
+    }
+  }
