@@ -28,7 +28,7 @@ export default function Support() {
       } else {
         setError(data.error || "Erreur lors de l'envoi du message.");
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       setError("Erreur lors de l'envoi du message.");
     }
     setLoading(false);

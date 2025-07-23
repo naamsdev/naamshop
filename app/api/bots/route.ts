@@ -30,7 +30,7 @@ export async function GET() {
     // Toujours retourner les bots, même si le tableau est vide.
     // Le front-end gérera l'affichage d'un catalogue vide.
     return NextResponse.json(bots);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: 'Erreur interne du serveur' },
       { status: 500 }

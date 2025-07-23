@@ -35,7 +35,11 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (err: any) {
-    return NextResponse.json({ success: false, error: err.message || 'Erreur envoi mail.' }, { status: 500 });
+  } catch (err: unknown) {
+    let errorMessage = 'Erreur envoi mail.';
+    if (err instanceof Error) {
+      errorMessage = err.message;
+    }
+    return NextResponse.json({ success: false, error: errorMessage }, { status: 500 });
   }
 } 
