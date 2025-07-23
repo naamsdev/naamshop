@@ -330,7 +330,7 @@ export default function Avis() {
           fontWeight: 700,
           marginBottom: 24,
           textAlign: 'center',
-          color: '#fff'
+          color: '#26acd4ff'
         }}>
           Avis des clients ({avis.length})
         </h2>

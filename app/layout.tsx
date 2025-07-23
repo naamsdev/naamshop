@@ -25,7 +25,9 @@ export default function RootLayout({
         background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
         fontFamily: inter.style.fontFamily,
         color: '#fff',
-        overflowX: 'hidden'
+        overflowX: 'hidden',
+        display: 'flex',
+        flexDirection: 'column'
       }}>
         <NavBarClientOnly />
         <ViewCounter />
@@ -41,7 +43,7 @@ export default function RootLayout({
           borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(10px)'
         }}>
-          Site web et bot discord 100% conçus par Naams
+          Site web et services 100% conçus par Naams
         </footer>
       </body>
     </html>

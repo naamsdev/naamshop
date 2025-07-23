@@ -3,21 +3,91 @@
     "id": "1",
     "name": "Bot de Modération",
     "description": "Un bot complet pour la modération de serveurs Discord avec logs, anti-spam, et commandes personnalisées.",
-    "price": 15.99,
-    "image": "/modbot.png"
+    "price": 7.00,
+    "image": "/images/modbot.png"
   },
   {
     "id": "2",
     "name": "Bot Musique",
     "description": "Permet d'écouter de la musique depuis YouTube, Spotify, etc. sur votre serveur Discord.",
-    "price": 12.99,
-    "image": "/musicbot.png"
+    "price": 5.00,
+    "image": "/images/musicbot.png"
   },
   {
     "id": "3",
     "name": "Bot Giveaway",
     "description": "Organisez facilement des giveaways automatiques sur votre serveur Discord.",
-    "price": 9.99,
-    "image": "/giveawaybot.png"
+    "price": 3.00,
+    "image": "/images/giveawaybot.png"
+  },
+  {
+    "id": "4",
+    "name": "Bot Ticket",
+    "description": "Un systeme de ticket complet pour vôtre serveur discord.",
+    "price": 6.00,
+    "image": "/images/ticket.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Crow-Bot",
+    "description": "Un bot qui gère modération, anti-raid et d'autre commande utilitaire.",
+    "price": 10.00,
+    "image": "/images/crowbot.png"
+  },
+  {
+    "id": "6",
+    "name": "Montage Vidéo & Audio < 5 min",
+    "description": "Montage professionnel pour vidéos YouTube, TikTok, podcasts, etc. Découpage, transitions, effets, nettoyage audio, habillage graphique.",
+    "price": 4.50,
+    "image": "/images/montage.png"
+  },
+  {
+    "id": "7",
+    "name": "Montage Vidéo & Audio < 15 min",
+    "description": "Montage professionnel pour vidéos YouTube, TikTok, podcasts, etc. Découpage, transitions, effets, nettoyage audio, habillage graphique.",
+    "price": 8.75,
+    "image": "/images/montage.png"
+  },
+  {
+    "id": "8",
+    "name": "Montage Vidéo & Audio < 30 min",
+    "description": "Montage professionnel pour vidéos YouTube, TikTok, podcasts, etc. Découpage, transitions, effets, nettoyage audio, habillage graphique.",
+    "price": 17.50,
+    "image": "/images/montage.png"
+  },
+  {
+    "id": "9",
+    "name": "Montage Vidéo & Audio < 1h",
+    "description": "Montage professionnel pour vidéos YouTube, TikTok, podcasts, etc. Découpage, transitions, effets, nettoyage audio, habillage graphique.",
+    "price": 35.00,
+    "image": "/images/montage.png"
+  },
+  {
+    "id": "10",
+    "name": "Développement Web",
+    "description": "Création de sites vitrines, portfolios, landing pages, outils personnalisés. Solutions modernes et sur-mesure.",
+    "price": 75.00,
+    "image": "/images/developpement.png"
+  },
+  {
+    "id": "11",
+    "name": "Script FiveM sur-mesure",
+    "description": "Développement de scripts personnalisés pour serveurs FiveM (GTA V). Fonctionnalités sur demande. Fichier lock",
+    "price": 35.00,
+    "image": "/images/developpement.png"
+  },
+  {
+    "id": "12",
+    "name": "Script FiveM sur-mesure",
+    "description": "Développement de scripts personnalisés pour serveurs FiveM (GTA V). Fonctionnalités sur demande. Fichier un-lock",
+    "price": 50.00,
+    "image": "/images/developpement.png"
+  },
+  {
+    "id": "13",
+    "name": "Configuration de script FiveM",
+    "description": "Configuration, installation et adaptation de scripts pour serveurs FiveM. Assistance et conseils inclus.",
+    "price": 15.00,
+    "image": "/images/developpement.png"
   }
 ] 

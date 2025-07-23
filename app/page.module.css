@@ -165,3 +165,393 @@ a.secondary {
     filter: invert();
   }
 }
+
+.home-main {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 40px 16px;
+  background: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.home-title {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #00c6ff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+.home-title-gradient {
+  color: #fff;
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.home-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 12px 0 24px 0;
+  text-align: center;
+  color: #fff;
+}
+.home-desc {
+  font-size: 20px;
+  color: #e0e6ed;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.home-btn {
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 48px;
+  font-size: 22px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  transition: transform 0.1s;
+  letter-spacing: 1px;
+  margin-top: 24px;
+}
+@media (max-width: 700px) {
+  .home-main {
+    padding: 24px 4vw;
+    max-width: 100vw;
+  }
+  .home-title {
+    font-size: 2rem;
+  }
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+  .home-desc {
+    font-size: 1rem;
+  }
+  .home-btn {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+  }
+}
+
+.catalogue-main {
+  min-height: 80vh;
+  padding: 40px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+}
+.catalogue-title {
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00c6ff;
+}
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.catalogue-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.catalogue-img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+.catalogue-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.catalogue-card-desc {
+  font-size: 14px;
+  color: #e0e6ed;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+.catalogue-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalogue-card-price {
+  font-size: 24px;
+  font-weight: 900;
+  color: #00c6ff;
+}
+.catalogue-card-btn {
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+@media (max-width: 700px) {
+  .catalogue-main {
+    padding: 24px 4vw;
+    max-width: 100vw;
+  }
+  .catalogue-title {
+    font-size: 1.5rem;
+  }
+  .catalogue-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .catalogue-card {
+    padding: 14px 8px;
+  }
+  .catalogue-img {
+    height: 80px;
+    margin-bottom: 12px;
+  }
+  .catalogue-card-title {
+    font-size: 1.1rem;
+  }
+  .catalogue-card-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .catalogue-card-btn {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+}
+
+/* --- Nouveau design catalogue moderne --- */
+.catalogue-modern-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #25477a 0%, #25477a 100%);
+  padding: 48px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.catalogue-modern-title {
+  color: #00c6ff;
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+.catalogue-modern-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+}
+.catalogue-modern-card {
+  background: rgba(255,255,255,0.07);
+  border: 2px solid rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+  padding: 32px 28px 28px 28px;
+  min-width: 340px;
+  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  text-align: left;
+}
+.catalogue-modern-card:hover {
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.catalogue-modern-img-bg {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #7b8dfb 0%, #a18fff 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.catalogue-modern-img {
+  width: 80px !important;
+  height: 80px !important;
+  object-fit: contain;
+}
+.catalogue-modern-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 0;
+  text-align: left;
+}
+.catalogue-modern-card-desc {
+  font-size: 1.05rem;
+  color: #e0e6ed;
+  margin-bottom: 18px;
+  line-height: 1.5;
+  text-align: left;
+}
+.catalogue-modern-card-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  gap: 12px;
+}
+.catalogue-modern-card-price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #00c6ff;
+  text-align: left;
+  display: block;
+  margin-bottom: 0;
+}
+.catalogue-modern-card-btn {
+  background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 12px rgba(0,198,255,0.13);
+  transition: transform 0.1s, box-shadow 0.1s;
+  margin-top: 0;
+  width: auto;
+  min-width: 120px;
+  justify-content: center;
+}
+.catalogue-modern-card-btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 4px 24px rgba(0,198,255,0.18);
+}
+.catalogue-modern-btn-icon {
+  font-size: 1.3em;
+  margin-right: 4px;
+}
+@media (max-width: 900px) {
+  .catalogue-modern-bg {
+    padding: 18px 0;
+  }
+  .catalogue-modern-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100vw;
+    max-width: 100vw;
+  }
+  .catalogue-modern-card {
+    min-width: 95vw;
+    max-width: 98vw;
+    padding: 14px 4vw 18px 4vw;
+    margin: 0 0 12px 0;
+    box-sizing: border-box;
+  }
+  .catalogue-modern-img-bg {
+    height: 70px;
+  }
+  .catalogue-modern-img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .catalogue-modern-card-title {
+    font-size: 1.05rem;
+  }
+  .catalogue-modern-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .catalogue-modern-card-btn {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+  .catalogue-modern-card-price {
+    font-size: 1.1rem;
+  }
+}
+
+.home-section {
+  background: rgba(255,255,255,0.07);
+  border: 2px solid rgba(255,255,255,0.13);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+  padding: 28px 24px 22px 24px;
+  margin: 0 0 32px 0;
+  max-width: 700px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-section-title {
+  color: #00c6ff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  margin-top: 0;
+  text-align: left;
+}
+.home-section-desc {
+  color: #e0e6ed;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.home-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: left;
+}
+.home-section-list li {
+  margin-bottom: 8px;
+}
+@media (max-width: 900px) {
+  .home-section {
+    padding: 14px 4vw 14px 4vw;
+    max-width: 98vw;
+  }
+  .home-section-title {
+    font-size: 1.1rem;
+  }
+  .home-section-desc, .home-section-list {
+    font-size: 1rem;
+  }
+}

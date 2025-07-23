@@ -40,3 +40,31 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Responsive global */
+@media (max-width: 900px) {
+  html, body {
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+  html, body {
+    font-size: 14px;
+  }
+  main, .main, .page {
+    padding: 0 4vw !important;
+    max-width: 100vw !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  h3 {
+    font-size: 1.1rem !important;
+  }
+  button, input, select {
+    font-size: 1rem !important;
+  }
+}

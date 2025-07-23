@@ -17,6 +17,7 @@ export default function Panier() {
   const [methodePaiement, setMethodePaiement] = useState<string>("");
   const [email, setEmail] = useState("");
   const [nom, setNom] = useState("");
+  const [supportPremium, setSupportPremium] = useState(false);
 
   // Charger les produits du panier au démarrage
   useEffect(() => {
@@ -86,7 +87,9 @@ export default function Panier() {
   };
 
   const calculerTotal = () => {
-    return produits.reduce((total, produit) => total + (produit.price * produit.quantity), 0);
+    let total = produits.reduce((total, produit) => total + (produit.price * produit.quantity), 0);
+    if (supportPremium) total += 20;
+    return total;
   };
 
   const handlePaiement = () => {
@@ -102,6 +105,9 @@ export default function Panier() {
       alert("Votre panier est vide");
       return;
     }
+
+    // Propager l'option supportPremium au checkout (à adapter dans la suite)
+    localStorage.setItem('supportPremiumNaamsShop', JSON.stringify(supportPremium));
 
     // Simulation du processus de paiement
     alert(`Paiement en cours via ${methodePaiement}...\n\nProduits : ${produits.length}\nTotal : ${calculerTotal()}€\n\nRedirection vers le système de paiement...`);
@@ -327,6 +333,19 @@ export default function Panier() {
               <span style={{ fontSize: '18px', fontWeight: 700, color: '#00c6ff' }}>Total :</span>
               <span style={{ fontSize: '20px', fontWeight: 700, color: '#00c6ff' }}>{calculerTotal()}€</span>
             </div>
+          </div>
+
+          {/* Option Support Premium */}
+          <div style={{ margin: '24px 0' }}>
+            <label style={{ fontWeight: 600 }}>
+              <input
+                type="checkbox"
+                checked={supportPremium}
+                onChange={e => setSupportPremium(e.target.checked)}
+                style={{ marginRight: 8 }}
+              />
+              Support Premium (+20€) — Suivi prioritaire & maintenance longue durée
+            </label>
           </div>
 
           {/* Informations client */}

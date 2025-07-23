@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import './NavBarResponsive.css';
 
 interface Produit {
   id: string;
@@ -19,6 +20,7 @@ export default function NavBar() {
   const [methodePaiement, setMethodePaiement] = useState<string>("");
   const [email, setEmail] = useState("");
   const [nom, setNom] = useState("");
+  const [menuMobileOuvert, setMenuMobileOuvert] = useState(false);
 
   // Charger les produits du panier au démarrage
   useEffect(() => {
@@ -160,95 +162,27 @@ export default function NavBar() {
 
   return (
     <>
-      <header style={{
-        background: 'rgba(0, 0, 0, 0.8)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        padding: '16px 0',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100
-      }}>
-        <nav style={{
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '0 20px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center'
-        }}>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '40px'
-          }}>
-            <Link href="/" style={{
-              textDecoration: 'none',
-              color: '#00c6ff',
-              fontSize: '24px',
-              fontWeight: 900,
-              letterSpacing: 1
-            }}>
-              NaamsShop
-            </Link>
-            
-            <Link href="/catalogue" style={{
-              textDecoration: 'none',
-              color: pathname === '/catalogue' ? '#00c6ff' : '#fff',
-              fontSize: '16px',
-              fontWeight: 600,
-              padding: '8px 16px',
-              borderRadius: '8px',
-              transition: 'all 0.2s',
-              borderBottom: pathname === '/catalogue' ? '2px solid #00c6ff' : 'none'
-            }}>
-              Catalogue
-            </Link>
-            
-            <Link href="/avis" style={{
-              textDecoration: 'none',
-              color: pathname === '/avis' ? '#00c6ff' : '#fff',
-              fontSize: '16px',
-              fontWeight: 600,
-              padding: '8px 16px',
-              borderRadius: '8px',
-              transition: 'all 0.2s',
-              borderBottom: pathname === '/avis' ? '2px solid #00c6ff' : 'none'
-            }}>
-              Avis
-            </Link>
+      <header className="navbar-header">
+        <nav className="navbar-nav">
+          <div className="navbar-links">
+            <Link href="/" className="navbar-logo">NaamsShop</Link>
+            <button className="navbar-burger" aria-label="Ouvrir le menu" onClick={() => setMenuMobileOuvert(!menuMobileOuvert)}>
+              <span className="navbar-burger-bar" />
+              <span className="navbar-burger-bar" />
+              <span className="navbar-burger-bar" />
+            </button>
+            <div className={`navbar-menu${menuMobileOuvert ? ' open' : ''}`}>
+              <Link href="/catalogue" className={pathname === '/catalogue' ? 'active' : ''}>Catalogue</Link>
+              <Link href="/avis" className={pathname === '/avis' ? 'active' : ''}>Avis</Link>
+              <Link href="/cgv" className={pathname === '/cgv' ? 'active' : ''}>CGV</Link>
+              <Link href="/achat-personnalise" className={pathname === '/achat-personnalise' ? 'active' : ''}>Achat personnalisé</Link>
+              <Link href="/support" className={pathname === '/support' ? 'active' : ''}>Support</Link>
+            </div>
           </div>
-
-          <button
-            onClick={() => setPanierOuvert(!panierOuvert)}
-            style={{
-              background: 'rgba(255, 255, 255, 0.1)',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
-              borderRadius: '8px',
-              padding: '8px 16px',
-              color: '#fff',
-              cursor: 'pointer',
-              fontSize: '14px',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              position: 'relative'
-            }}
-          >
+          <button className="navbar-panier" onClick={() => setPanierOuvert(!panierOuvert)}>
             🛒 Votre panier
             {produits.length > 0 && (
-              <span style={{
-                background: '#ff3b30',
-                color: '#fff',
-                borderRadius: '50%',
-                width: '20px',
-                height: '20px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '12px',
-                fontWeight: 600
-              }}>
+              <span className="navbar-panier-badge">
                 {produits.reduce((total, p) => total + p.quantity, 0)}
               </span>
             )}
@@ -258,27 +192,8 @@ export default function NavBar() {
 
       {/* Overlay du panier */}
       {panierOuvert && (
-        <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: 'rgba(0, 0, 0, 0.5)',
-          zIndex: 1000,
-          display: 'flex',
-          justifyContent: 'flex-end'
-        }} onClick={() => setPanierOuvert(false)}>
-          <div style={{
-            width: '400px',
-            height: '100vh',
-            background: 'rgba(0, 0, 0, 0.95)',
-            backdropFilter: 'blur(10px)',
-            borderLeft: '1px solid rgba(255, 255, 255, 0.1)',
-            padding: '20px',
-            overflowY: 'auto',
-            color: '#fff'
-          }} onClick={(e) => e.stopPropagation()}>
+        <div className="panier-overlay" onClick={() => setPanierOuvert(false)}>
+          <div className="panier-content" onClick={(e) => e.stopPropagation()}>
             {/* Header du panier */}
             <div style={{
               display: 'flex',
